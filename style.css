@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* ------basic code ------  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-color: rgba(0, 165, 7, 1);
+  --secondary-colour: rgba(26, 26, 41, 1);
+  --dark-color: rgba(0, 0, 54, 1);
+  --light-color: rgba(161, 158, 158, 0.522);
+  --low-priority: rgba(146, 145, 150, 0.403);
+  --max-width: 1200px;
+}
+
+/* ------basic code ------  */
+
+/* ------header section starts------  */
+
+header {
+  width: 100%;
+  background-color: var(--secondary-colour);
+  overflow: hidden;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  overflow: hidden;
+}
+nav {
+  background-color: var(--dark-color);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+}
+.nav-main {
+  position: sticky;
+
+  bottom: 0;
+}
+.logo {
+  color: var(--primary-color);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.nav-item {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.nav-list {
+  list-style: none;
+  margin: 0 15px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.nav-link::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: var(--primary-color);
+  height: 2px;
+}
+.nav-link:hover:after {
+  width: 100%;
+}
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.slider-main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  height: 80vh;
+  margin-bottom: -50px;
+  position: relative;
+}
+.left-slider {
+  z-index: 100;
+}
+.left-slider h1,
+h3,
+p {
+  margin: 13px 0;
+  /* font-size: 20px; */
+  color: #fff;
+}
+.left-slider h1 {
+  color: var(--primary-color);
+}
+.btn {
+  margin-top: 35px;
+}
+.btn a {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn-icon {
+  color: #fff;
+  margin-left: 5px;
+}
+.btn a:last-child,
+.btn-eye {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.right-slider {
+  position: relative;
+  margin-right: 50px;
+}
+.circle {
+  width: 400px;
+  height: 400px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  right: 35px;
+  top: -50px;
+}
+.slider-img {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  right: 30px;
+  top: -170px;
+}
+/* ------header section ends------  */
+/* -----about me section starts ----- */
+.about-main {
+  background-color: var(--secondary-colour);
+  width: 100%;
+}
+.about-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 5px;
+}
+.about-text {
+  padding-top: 160px;
+}
+.about-text h2 {
+  color: var(--primary-color);
+}
+.about-text p {
+  text-align: justify;
+  font-size: 15px;
+}
+.experience {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.big-text {
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: 900;
+  margin-right: 15px;
+}
+
+.about-skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-content: center; */
+}
+.skill-item {
+  width: 100%;
+  background-color: var(--low-priority);
+  margin: 30px 10px;
+  text-align: left;
+  vertical-align: middle;
+  padding: 80px 50px;
+}
+.card-icon {
+  color: #fff;
+  font-size: 50px;
+}
+.card-heading {
+  line-height: 35px;
+}
+.skill-item:first-child {
+  background-color: var(--primary-color);
+}
+/* -----about me section ends ----- */
+/* -------- services section starts -------  */
+.services-main {
+  width: 100%;
+  background-color: var(--secondary-colour);
+}
+.services-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 5px;
+}
+.services-heading {
+  color: #fff;
+  padding: 40px 0;
+}
+.services-item {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-content: center;
+}
+.services-list {
+  background-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 10px;
+  height: auto;
+  padding: 90px 10px;
+  line-height: 30px;
+}
+.services-list:nth-child(even) {
+  border: 1px solid var(--primary-color);
+}
+.services-icon {
+  color: #fff;
+  font-size: 30px;
+}
+.services-heading-item {
+  color: var(--primary-color);
+}
+/* -------- services section ends -------  */
+/* -------projects section starts--------  */
+.projects-main {
+  width: 100%;
+  background-color: var(--secondary-colour);
+}
+.projects-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 5px;
+}
+.projects-heading {
+  color: var(--primary-color);
+  padding-top: 50px;
+}
+.projects-para {
+  padding-bottom: 20px;
+}
+.projects-lists {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-content: center;
+}
+.projects-items {
+  background-color: transparent;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  margin: 10px;
+  height: auto;
+}
+.projects-img {
+  width: 100%;
+  height: 40vh;
+}
+.projects-discription {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+.projects-btn-container {
+  margin-top: 35px;
+}
+
+.projects-btn {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  padding: 7px 15px;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+.projects-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+/* -------projects section ends--------  */
+/* --------contact section starts---------  */
+.contacts-main {
+  width: 100%;
+  background-color: var(--secondary-colour);
+}
+.contacts-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 50px 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.contact-left {
+  width: 100%;
+}
+.contact-left h2 {
+  color: var(--primary-color);
+}
+.social-icon {
+  color: var(--primary-color);
+  font-size: 16px;
+}
+.social-icon i {
+  font-weight: 900;
+  cursor: pointer;
+}
+.social-icon i:hover,
+.footer-social-icon i:hover {
+  color: #fff;
+}
+.contact-right {
+  width: 100%;
+  /* background-color: bisque; */
+  height: auto;
+}
+.contact-right h2 {
+  text-align: left;
+  color: var(--primary-color);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: flex-start; */
+  align-content: flex-start;
+}
+.contact-input {
+  width: 70%;
+  height: 43px;
+  margin: 8px 0;
+  border-style: none;
+  padding: 0 15px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--low-priority);
+  border-radius: 3px;
+  letter-spacing: 2px;
+}
+.contact-input-last {
+  height: 70px;
+}
+.form-btn {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 8px 70px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.form-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+/* --------contact section ends---------  */
+/* --------footer section starts--------- ----- */
+.footer-maim {
+  width: 100%;
+  background-color: var(--secondary-colour);
+}
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 5px;
+  background-color: var(--dark-color);
+}
+.footer-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.footer-link a {
+  text-decoration: none;
+  color: var(--light-color);
+  transition: 0.5s;
+}
+.footer-link a:hover {
+  color: #fff;
+}
+.footer-social-icon {
+  padding: 5px 0;
+}
+.footer-social-icon i {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 900;
+}
+/* --------footer section ends---------  */
