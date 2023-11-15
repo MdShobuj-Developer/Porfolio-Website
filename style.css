@@ -23,6 +23,14 @@ body {
 /* ------basic code ------  */
 
 /* ------header section starts------  */
+@media screen and (max-width: 900px) {
+  header {
+    background-color: #fff;
+  }
+  nav {
+    background-color: aqua;
+  }
+}
 
 header {
   width: 100%;
@@ -42,6 +50,7 @@ nav {
   align-items: center;
   padding: 10px 5px;
 }
+
 .nav-main {
   position: sticky;
 
@@ -85,6 +94,11 @@ nav {
 }
 .nav-link:hover {
   color: var(--primary-color);
+}
+.nav-bar {
+  color: #fff;
+  font-size: 20px;
+  display: none;
 }
 
 .slider-main {
